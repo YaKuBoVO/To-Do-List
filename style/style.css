@@ -61,12 +61,25 @@ form .box-input button i {
 }
 
 
+/* Custom Selector */
+section {
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   -ms-appearance: none;
+   appearance: none;
+   outline: none;
+   box-shadow: none;
+   border: 0 !important;
+   background-image: none;
+}
+
+
 .select {
    margin: 1rem;
    position: relative;
    overflow: hidden;
 }
-form .box-option .select {
+form  .select .filter-todo {
    width: 12rem;
    height: 40px;
    font-size: 22px;
@@ -78,14 +91,13 @@ form .box-option .select {
 }
 
 /* Arrow */
-select::after {
+.select::after {
    content: "\25BC";
    position: absolute;
    top: 0;
-   left: 0;
    right: 0;
    padding: 1rem;
-   background: #ff6f47;
+   color: #ff6f47;
    cursor: pointer;
    pointer-events: none;
 }
@@ -109,7 +121,7 @@ select::after {
    display: flex;
    justify-content: space-between;
    align-items: center;
-   transition: all 1s ease;
+   transition: all 0.6s ease;
 }
 #todoItem {
    display: inline-block;
@@ -156,10 +168,10 @@ select::after {
    background: rgb(26,212,127);
 }
 
-.fa-trash,
+/*.fa-trash,
 .fa-check {
    pointer-events: none;
-}
+}*/
 
 .fall {
    transform: translateY(10rem) rotate(20deg);
@@ -167,6 +179,6 @@ select::after {
 }
 
 .completed {
-   text-decoration: line-through !important;
+   text-decoration: line-through;
    opacity: 0.5;
 }
